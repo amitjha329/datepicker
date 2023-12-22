@@ -1,10 +1,15 @@
 require("./main.css");
 var $8zHUo$reactjsxruntime = require("react/jsx-runtime");
 var $8zHUo$react = require("react");
+var $8zHUo$clsx = require("clsx");
 
 
 function $parcel$export(e, n, v, s) {
   Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
+}
+
+function $parcel$interopDefault(a) {
+  return a && a.__esModule ? a.default : a;
 }
 
 $parcel$export(module.exports, "DateRangePicker", () => $b3e27ee364e3327b$export$2e2bcd8739ae039);
@@ -785,9 +790,10 @@ var $e72f03f8dc70d945$export$2e2bcd8739ae039 = $e72f03f8dc70d945$var$PickerConta
 
 
 
-const $b7a477b3af68a916$var$Button = ({ setShowCalendar: setShowCalendar, showCalendar: showCalendar, start_date: start_date, end_date: end_date })=>{
+
+const $b7a477b3af68a916$var$Button = ({ setShowCalendar: setShowCalendar, showCalendar: showCalendar, start_date: start_date, end_date: end_date, className: className })=>{
     return /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsxs)("div", {
-        className: "container",
+        className: (0, ($parcel$interopDefault($8zHUo$clsx)))("container", className),
         style: {
             pointerEvents: showCalendar ? "none" : "all"
         },
@@ -818,7 +824,7 @@ const $b7a477b3af68a916$var$Button = ({ setShowCalendar: setShowCalendar, showCa
 var $b7a477b3af68a916$export$2e2bcd8739ae039 = $b7a477b3af68a916$var$Button;
 
 
-const $b3e27ee364e3327b$var$DateRangePicker = ({ range: range, onChangeDateRange: onChangeDateRange })=>{
+const $b3e27ee364e3327b$var$DateRangePicker = ({ range: range, onChangeDateRange: onChangeDateRange, buttonClasses: buttonClasses })=>{
     const [showCalendar, setShowCalendar] = (0, $8zHUo$react.useState)(false);
     const [isButtonCloserToLeftSide, setIsButtonCloserToLeftSide] = (0, $8zHUo$react.useState)(false);
     const dateProps = (0, $c2343a66497a5af3$export$2e2bcd8739ae039)(range);
@@ -872,7 +878,8 @@ const $b3e27ee364e3327b$var$DateRangePicker = ({ range: range, onChangeDateRange
                 setShowCalendar: setShowCalendar,
                 showCalendar: showCalendar,
                 start_date: dateRange.start_date,
-                end_date: dateRange.end_date
+                end_date: dateRange.end_date,
+                className: buttonClasses
             }),
             showCalendar ? /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)((0, $e72f03f8dc70d945$export$2e2bcd8739ae039), {
                 handleCancel: handleCancel,

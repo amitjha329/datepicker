@@ -1,18 +1,20 @@
-import React, {FC, useEffect, useRef, useState} from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import useDate from '../../../hooks/useDate';
 import PickerContainer from '../../PickerContainer';
 import '../DateRangePicker.style.css';
 import Button from './Button';
 interface IDateRangePickerProps {
-  range: {startDate: Date; endDate: Date};
+  range: { startDate: Date; endDate: Date };
+  buttonClasses: string;
   onChangeDateRange: React.Dispatch<
-    React.SetStateAction<{startDate: Date; endDate: Date}>
+    React.SetStateAction<{ startDate: Date; endDate: Date }>
   >;
 }
 
 const DateRangePicker: FC<IDateRangePickerProps> = ({
   range,
-  onChangeDateRange
+  onChangeDateRange,
+  buttonClasses
 }) => {
   const [showCalendar, setShowCalendar] = useState<boolean>(false);
   const [isButtonCloserToLeftSide, setIsButtonCloserToLeftSide] =
@@ -32,7 +34,7 @@ const DateRangePicker: FC<IDateRangePickerProps> = ({
   };
   const handleApply = (start_date: number, end_date: number | undefined) => {
     setDateToStartDate(start_date);
-    setDateRange({start_date: start_date, end_date: end_date});
+    setDateRange({ start_date: start_date, end_date: end_date });
     setShowCalendar(false);
     onChangeDateRange({
       startDate: new Date(start_date),
@@ -73,6 +75,7 @@ const DateRangePicker: FC<IDateRangePickerProps> = ({
         showCalendar={showCalendar}
         start_date={dateRange.start_date}
         end_date={dateRange.end_date}
+        className={buttonClasses}
       />
       {showCalendar ? (
         <PickerContainer

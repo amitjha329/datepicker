@@ -1,6 +1,7 @@
 import "./main.css";
 import {jsxs as $hgUW1$jsxs, jsx as $hgUW1$jsx, Fragment as $hgUW1$Fragment} from "react/jsx-runtime";
 import {useState as $hgUW1$useState, useRef as $hgUW1$useRef, useEffect as $hgUW1$useEffect} from "react";
+import $hgUW1$clsx from "clsx";
 
 
 
@@ -779,9 +780,10 @@ var $b8755f1bc975f272$export$2e2bcd8739ae039 = $b8755f1bc975f272$var$PickerConta
 
 
 
-const $170d60dcf44c49c0$var$Button = ({ setShowCalendar: setShowCalendar, showCalendar: showCalendar, start_date: start_date, end_date: end_date })=>{
+
+const $170d60dcf44c49c0$var$Button = ({ setShowCalendar: setShowCalendar, showCalendar: showCalendar, start_date: start_date, end_date: end_date, className: className })=>{
     return /*#__PURE__*/ (0, $hgUW1$jsxs)("div", {
-        className: "container",
+        className: (0, $hgUW1$clsx)("container", className),
         style: {
             pointerEvents: showCalendar ? "none" : "all"
         },
@@ -812,7 +814,7 @@ const $170d60dcf44c49c0$var$Button = ({ setShowCalendar: setShowCalendar, showCa
 var $170d60dcf44c49c0$export$2e2bcd8739ae039 = $170d60dcf44c49c0$var$Button;
 
 
-const $630394e9d4344824$var$DateRangePicker = ({ range: range, onChangeDateRange: onChangeDateRange })=>{
+const $630394e9d4344824$var$DateRangePicker = ({ range: range, onChangeDateRange: onChangeDateRange, buttonClasses: buttonClasses })=>{
     const [showCalendar, setShowCalendar] = (0, $hgUW1$useState)(false);
     const [isButtonCloserToLeftSide, setIsButtonCloserToLeftSide] = (0, $hgUW1$useState)(false);
     const dateProps = (0, $3464daf23ab7e3f5$export$2e2bcd8739ae039)(range);
@@ -866,7 +868,8 @@ const $630394e9d4344824$var$DateRangePicker = ({ range: range, onChangeDateRange
                 setShowCalendar: setShowCalendar,
                 showCalendar: showCalendar,
                 start_date: dateRange.start_date,
-                end_date: dateRange.end_date
+                end_date: dateRange.end_date,
+                className: buttonClasses
             }),
             showCalendar ? /*#__PURE__*/ (0, $hgUW1$jsx)((0, $b8755f1bc975f272$export$2e2bcd8739ae039), {
                 handleCancel: handleCancel,

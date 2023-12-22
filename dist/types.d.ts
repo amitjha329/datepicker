@@ -4,6 +4,7 @@ interface IDateRangePickerProps {
         startDate: Date;
         endDate: Date;
     };
+    buttonClasses: string;
     onChangeDateRange: React.Dispatch<React.SetStateAction<{
         startDate: Date;
         endDate: Date;

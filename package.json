@@ -1,6 +1,6 @@
 {
   "name": "datepicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom Date Picker",
   "main": "dist/main.js",
   "source": "src/index.ts",
@@ -37,5 +37,8 @@
   },
   "peerDependencies": {
     "react": "^18.2.0"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0"
   }
 }

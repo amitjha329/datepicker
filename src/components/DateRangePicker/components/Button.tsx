@@ -1,22 +1,25 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
+import clsx from 'clsx'
 
 interface IButtonProps {
   setShowCalendar: React.Dispatch<React.SetStateAction<boolean>>;
   showCalendar: boolean;
   start_date: number;
   end_date?: number;
+  className: string;
 }
 
 const Button: FC<IButtonProps> = ({
   setShowCalendar,
   showCalendar,
   start_date,
-  end_date
+  end_date,
+  className
 }) => {
   return (
     <div
-      className="container"
-      style={{pointerEvents: showCalendar ? 'none' : 'all'}}
+      className={clsx("container", className)}
+      style={{ pointerEvents: showCalendar ? 'none' : 'all' }}
       onClick={() => setShowCalendar(true)}
     >
       <div className="date">
