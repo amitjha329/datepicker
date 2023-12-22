@@ -20,11 +20,11 @@ const Button: FC<IButtonProps> = ({
       onClick={() => setShowCalendar(true)}
     >
       <div className="date">
-        <span>{new Date(start_date).toLocaleDateString('en-EN')}</span>
+        <span>{new Date(start_date).toLocaleDateString('en-IN')}</span>
       </div>
-      <div className="space">-</div>
+      <div className="space"> to </div>
       <div className="date">
-        <span> {new Date(end_date!!).toLocaleDateString('en-EN')}</span>
+        <span> {new Date(end_date!!).toLocaleDateString('en-IN')}</span>
       </div>
     </div>
   );
