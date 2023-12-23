@@ -68,8 +68,10 @@ const DateRangePicker: FC<IDateRangePickerProps> = ({
       style={{
         position: 'relative',
         width: 'fit-content'
+
       }}
     >
+      <label>Select Duration</label>
       <Button
         setShowCalendar={setShowCalendar}
         showCalendar={showCalendar}
