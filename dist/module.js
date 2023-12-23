@@ -864,6 +864,9 @@ const $630394e9d4344824$var$DateRangePicker = ({ range: range, onChangeDateRange
             width: "fit-content"
         },
         children: [
+            /*#__PURE__*/ (0, $hgUW1$jsx)("label", {
+                children: "Select Duration"
+            }),
             /*#__PURE__*/ (0, $hgUW1$jsx)((0, $170d60dcf44c49c0$export$2e2bcd8739ae039), {
                 setShowCalendar: setShowCalendar,
                 showCalendar: showCalendar,

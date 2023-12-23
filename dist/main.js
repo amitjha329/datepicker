@@ -874,6 +874,9 @@ const $b3e27ee364e3327b$var$DateRangePicker = ({ range: range, onChangeDateRange
             width: "fit-content"
         },
         children: [
+            /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("label", {
+                children: "Select Duration"
+            }),
             /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)((0, $b7a477b3af68a916$export$2e2bcd8739ae039), {
                 setShowCalendar: setShowCalendar,
                 showCalendar: showCalendar,
