@@ -782,31 +782,43 @@ var $b8755f1bc975f272$export$2e2bcd8739ae039 = $b8755f1bc975f272$var$PickerConta
 
 
 const $170d60dcf44c49c0$var$Button = ({ setShowCalendar: setShowCalendar, showCalendar: showCalendar, start_date: start_date, end_date: end_date, className: className })=>{
-    return /*#__PURE__*/ (0, $hgUW1$jsxs)("div", {
-        className: (0, $hgUW1$clsx)("container", className),
-        style: {
-            pointerEvents: showCalendar ? "none" : "all"
-        },
-        onClick: ()=>setShowCalendar(true),
+    return /*#__PURE__*/ (0, $hgUW1$jsxs)((0, $hgUW1$Fragment), {
         children: [
-            /*#__PURE__*/ (0, $hgUW1$jsx)("div", {
-                className: "date",
-                children: /*#__PURE__*/ (0, $hgUW1$jsx)("span", {
-                    children: new Date(start_date).toLocaleDateString("en-IN")
-                })
+            /*#__PURE__*/ (0, $hgUW1$jsx)("label", {
+                style: {
+                    fontSize: "0.875rem",
+                    lineHeight: "1.25rem"
+                },
+                children: "Select Duration"
             }),
-            /*#__PURE__*/ (0, $hgUW1$jsx)("div", {
-                className: "space",
-                children: " to "
-            }),
-            /*#__PURE__*/ (0, $hgUW1$jsx)("div", {
-                className: "date",
-                children: /*#__PURE__*/ (0, $hgUW1$jsxs)("span", {
-                    children: [
-                        " ",
-                        new Date(end_date).toLocaleDateString("en-IN")
-                    ]
-                })
+            /*#__PURE__*/ (0, $hgUW1$jsxs)("div", {
+                id: "date_picker",
+                className: (0, $hgUW1$clsx)("container", className),
+                style: {
+                    pointerEvents: showCalendar ? "none" : "all"
+                },
+                onClick: ()=>setShowCalendar(true),
+                children: [
+                    /*#__PURE__*/ (0, $hgUW1$jsx)("div", {
+                        className: "date",
+                        children: /*#__PURE__*/ (0, $hgUW1$jsx)("span", {
+                            children: new Date(start_date).toLocaleDateString("en-IN")
+                        })
+                    }),
+                    /*#__PURE__*/ (0, $hgUW1$jsx)("div", {
+                        className: "space",
+                        children: " to "
+                    }),
+                    /*#__PURE__*/ (0, $hgUW1$jsx)("div", {
+                        className: "date",
+                        children: /*#__PURE__*/ (0, $hgUW1$jsxs)("span", {
+                            children: [
+                                " ",
+                                new Date(end_date).toLocaleDateString("en-IN")
+                            ]
+                        })
+                    })
+                ]
             })
         ]
     });
@@ -864,13 +876,6 @@ const $630394e9d4344824$var$DateRangePicker = ({ range: range, onChangeDateRange
             width: "fit-content"
         },
         children: [
-            /*#__PURE__*/ (0, $hgUW1$jsx)("label", {
-                style: {
-                    fontSize: "0.875rem",
-                    lineHeight: "1.25rem"
-                },
-                children: "Select Duration"
-            }),
             /*#__PURE__*/ (0, $hgUW1$jsx)((0, $170d60dcf44c49c0$export$2e2bcd8739ae039), {
                 setShowCalendar: setShowCalendar,
                 showCalendar: showCalendar,

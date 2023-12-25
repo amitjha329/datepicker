@@ -17,19 +17,26 @@ const Button: FC<IButtonProps> = ({
   className
 }) => {
   return (
-    <div
-      className={clsx("container", className)}
-      style={{ pointerEvents: showCalendar ? 'none' : 'all' }}
-      onClick={() => setShowCalendar(true)}
-    >
-      <div className="date">
-        <span>{new Date(start_date).toLocaleDateString('en-IN')}</span>
+    <>
+      <label style={{
+        fontSize: "0.875rem",
+        lineHeight: "1.25rem"
+      }}>Select Duration</label>
+      <div
+        id='date_picker'
+        className={clsx("container", className)}
+        style={{ pointerEvents: showCalendar ? 'none' : 'all' }}
+        onClick={() => setShowCalendar(true)}
+      >
+        <div className="date">
+          <span>{new Date(start_date).toLocaleDateString('en-IN')}</span>
+        </div>
+        <div className="space"> to </div>
+        <div className="date">
+          <span> {new Date(end_date!!).toLocaleDateString('en-IN')}</span>
+        </div>
       </div>
-      <div className="space"> to </div>
-      <div className="date">
-        <span> {new Date(end_date!!).toLocaleDateString('en-IN')}</span>
-      </div>
-    </div>
+    </>
   );
 };
 

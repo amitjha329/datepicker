@@ -71,10 +71,6 @@ const DateRangePicker: FC<IDateRangePickerProps> = ({
 
       }}
     >
-      <label style={{
-        fontSize: "0.875rem",
-        lineHeight: "1.25rem"
-      }}>Select Duration</label>
       <Button
         setShowCalendar={setShowCalendar}
         showCalendar={showCalendar}

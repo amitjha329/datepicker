@@ -792,31 +792,43 @@ var $e72f03f8dc70d945$export$2e2bcd8739ae039 = $e72f03f8dc70d945$var$PickerConta
 
 
 const $b7a477b3af68a916$var$Button = ({ setShowCalendar: setShowCalendar, showCalendar: showCalendar, start_date: start_date, end_date: end_date, className: className })=>{
-    return /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsxs)("div", {
-        className: (0, ($parcel$interopDefault($8zHUo$clsx)))("container", className),
-        style: {
-            pointerEvents: showCalendar ? "none" : "all"
-        },
-        onClick: ()=>setShowCalendar(true),
+    return /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsxs)((0, $8zHUo$reactjsxruntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("div", {
-                className: "date",
-                children: /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("span", {
-                    children: new Date(start_date).toLocaleDateString("en-IN")
-                })
+            /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("label", {
+                style: {
+                    fontSize: "0.875rem",
+                    lineHeight: "1.25rem"
+                },
+                children: "Select Duration"
             }),
-            /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("div", {
-                className: "space",
-                children: " to "
-            }),
-            /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("div", {
-                className: "date",
-                children: /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsxs)("span", {
-                    children: [
-                        " ",
-                        new Date(end_date).toLocaleDateString("en-IN")
-                    ]
-                })
+            /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsxs)("div", {
+                id: "date_picker",
+                className: (0, ($parcel$interopDefault($8zHUo$clsx)))("container", className),
+                style: {
+                    pointerEvents: showCalendar ? "none" : "all"
+                },
+                onClick: ()=>setShowCalendar(true),
+                children: [
+                    /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("div", {
+                        className: "date",
+                        children: /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("span", {
+                            children: new Date(start_date).toLocaleDateString("en-IN")
+                        })
+                    }),
+                    /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("div", {
+                        className: "space",
+                        children: " to "
+                    }),
+                    /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("div", {
+                        className: "date",
+                        children: /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsxs)("span", {
+                            children: [
+                                " ",
+                                new Date(end_date).toLocaleDateString("en-IN")
+                            ]
+                        })
+                    })
+                ]
             })
         ]
     });
@@ -874,13 +886,6 @@ const $b3e27ee364e3327b$var$DateRangePicker = ({ range: range, onChangeDateRange
             width: "fit-content"
         },
         children: [
-            /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)("label", {
-                style: {
-                    fontSize: "0.875rem",
-                    lineHeight: "1.25rem"
-                },
-                children: "Select Duration"
-            }),
             /*#__PURE__*/ (0, $8zHUo$reactjsxruntime.jsx)((0, $b7a477b3af68a916$export$2e2bcd8739ae039), {
                 setShowCalendar: setShowCalendar,
                 showCalendar: showCalendar,

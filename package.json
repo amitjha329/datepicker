@@ -1,6 +1,6 @@
 {
   "name": "datepicker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Custom Date Picker",
   "main": "dist/main.js",
   "source": "src/index.ts",
