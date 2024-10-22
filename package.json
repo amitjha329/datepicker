@@ -2,10 +2,8 @@
   "name": "datepicker",
   "version": "1.0.4",
   "description": "Custom Date Picker",
-  "main": "dist/main.js",
   "source": "src/index.ts",
-  "module": "dist/module.js",
-  "types": "dist/types.d.ts",
+  "types": "src/types.ts",
   "scripts": {
     "check": "tsc --noEmit"
   },
